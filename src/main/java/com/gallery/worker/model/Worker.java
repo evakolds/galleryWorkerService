@@ -1,5 +1,7 @@
-package com.cinema.worker.model;
+package com.gallery.worker.model;
 
+import com.gallery.worker.WorkerRequest;
+import com.gallery.worker.WorkerResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,5 +36,24 @@ public final class Worker {
         this.surname = surname;
         this.salary = salary;
         this.position = position;
+    }
+
+    public static Worker fromWorkerRequest(WorkerRequest workerRequest) {
+        return new Worker(UUID.randomUUID(),
+                workerRequest.getName(),
+                workerRequest.getSurname(),
+                (int) workerRequest.getSalary(),
+                Position.valueOf(workerRequest.getPosition().toString()));
+    }
+
+    public WorkerResponse toWorkerResponse() {
+        return WorkerResponse.newBuilder().
+                setId(workerId.toString()).
+                setName(name).
+                setSurname(surname).
+                setSalary(salary).
+
+                setPosition(com.gallery.worker.Position.valueOf(position.name())).
+                build();
     }
 }

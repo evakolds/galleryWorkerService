@@ -1,4 +1,4 @@
-package com.cinema.worker.model;
+package com.gallery.worker.model;
 
 public enum Position {
     OWNER,

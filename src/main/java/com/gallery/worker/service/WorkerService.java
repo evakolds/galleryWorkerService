@@ -1,7 +1,7 @@
-package com.cinema.worker.service;
+package com.gallery.worker.service;
 
-import com.cinema.worker.model.Position;
-import com.cinema.worker.model.Worker;
+import com.gallery.worker.model.Position;
+import com.gallery.worker.model.Worker;
 
 import java.util.List;
 import java.util.UUID;

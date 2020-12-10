@@ -1,8 +1,8 @@
-package com.cinema.worker.api;
+package com.gallery.worker.api;
 
-import com.cinema.worker.model.Position;
-import com.cinema.worker.model.Worker;
-import com.cinema.worker.service.WorkerService;
+import com.gallery.worker.model.Position;
+import com.gallery.worker.model.Worker;
+import com.gallery.worker.service.WorkerService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import java.util.UUID;
 @RequestMapping("/worker")
 @AllArgsConstructor
 @NoArgsConstructor
-public class WorkerController {
+public class WorkerRestController {
 
     @Autowired
     private WorkerService workerService;
